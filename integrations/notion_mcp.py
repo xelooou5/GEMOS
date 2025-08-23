@@ -22,6 +22,12 @@ class NotionMCPClient:
         self.base_url = "https://mcp.notion.com/mcp"
         self.session: Optional[aiohttp.ClientSession] = None
         self.connected = False
+        self.headers = {
+            "Content-Type": "application/json",
+            "User-Agent": "GEM-OS/2.0.0 MCP-Client",
+            "Accept": "application/json",
+            **config.get("headers", {})
+        }
     
     async def initialize(self) -> bool:
         """Initialize Notion MCP connection."""
@@ -29,7 +35,7 @@ class NotionMCPClient:
             self.session = aiohttp.ClientSession()
             
             # Test connection
-            async with self.session.get(f"{self.base_url}/health") as response:
+            async with self.session.get(f"{self.base_url}/health", headers=self.headers) as response:
                 if response.status == 200:
                     self.connected = True
                     self.logger.info("✅ Connected to Notion MCP")
@@ -51,7 +57,7 @@ class NotionMCPClient:
                 "params": {"query": query}
             }
             
-            async with self.session.post(self.base_url, json=payload) as response:
+            async with self.session.post(self.base_url, json=payload, headers=self.headers) as response:
                 if response.status == 200:
                     data = await response.json()
                     return data.get("result", [])
@@ -72,7 +78,7 @@ class NotionMCPClient:
                 "params": {"page_id": page_id}
             }
             
-            async with self.session.post(self.base_url, json=payload) as response:
+            async with self.session.post(self.base_url, json=payload, headers=self.headers) as response:
                 if response.status == 200:
                     data = await response.json()
                     return data.get("result", {}).get("content", "")
@@ -97,7 +103,7 @@ class NotionMCPClient:
                 }
             }
             
-            async with self.session.post(self.base_url, json=payload) as response:
+            async with self.session.post(self.base_url, json=payload, headers=self.headers) as response:
                 if response.status == 200:
                     data = await response.json()
                     return data.get("result", {}).get("id")

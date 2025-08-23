@@ -1,0 +1,15 @@
+# Google Drive MCP Integration Configuration
+google_drive:
+  enabled: false
+  mcp_url: "https://mcp.googleapis.com/drive/v3"
+  connection_type: "streamable_http"
+  timeout: 30
+  
+  # HTTP headers
+  headers:
+    Authorization: "Bearer YOUR_GOOGLE_DRIVE_TOKEN"
+    Content-Type: "application/json"
+  
+  # Settings
+  max_search_results: 10
+  file_types: ["document", "spreadsheet", "presentation"]

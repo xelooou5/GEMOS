@@ -21,6 +21,12 @@ class GitBookMCPClient:
         self.base_url = config.get("mcp_url", "https://mcp.gitbook.com")
         self.session: Optional[aiohttp.ClientSession] = None
         self.connected = False
+        self.headers = {
+            "Content-Type": "application/json",
+            "User-Agent": "GEM-OS/2.0.0 MCP-Client",
+            "Accept": "application/json",
+            **config.get("headers", {})
+        }
     
     async def initialize(self) -> bool:
         """Initialize GitBook MCP connection."""
@@ -44,7 +50,7 @@ class GitBookMCPClient:
                 "params": {"query": query}
             }
             
-            async with self.session.post(self.base_url, json=payload) as response:
+            async with self.session.post(self.base_url, json=payload, headers=self.headers) as response:
                 if response.status == 200:
                     data = await response.json()
                     return data.get("result", [])
@@ -63,7 +69,7 @@ class GitBookMCPClient:
                 "params": {"page_id": page_id}
             }
             
-            async with self.session.post(self.base_url, json=payload) as response:
+            async with self.session.post(self.base_url, json=payload, headers=self.headers) as response:
                 if response.status == 200:
                     data = await response.json()
                     return data.get("result", {}).get("content", "")

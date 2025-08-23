@@ -1,0 +1,15 @@
+# Slack MCP Integration Configuration
+slack:
+  enabled: false
+  mcp_url: "https://mcp.slack.com/api"
+  connection_type: "streamable_http"
+  timeout: 30
+  
+  # HTTP headers
+  headers:
+    Authorization: "Bearer YOUR_SLACK_BOT_TOKEN"
+    Content-Type: "application/json"
+  
+  # Default settings
+  default_channel: "#general"
+  max_messages: 10

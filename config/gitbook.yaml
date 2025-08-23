@@ -1,10 +1,11 @@
 # GitBook MCP Integration Configuration
 gitbook:
   enabled: true
-  mcp_url: "https://mcp.gitbook.com"
+  mcp_url: "https://api.gitbook.com/v1"
   connection_type: "streamable_http"
   timeout: 30
   retry_attempts: 3
+  organization_id: "DOgQkRrYOCDFRExCtVfr"
   
   # Voice commands
   wake_words:
@@ -17,3 +18,18 @@ gitbook:
   # Settings
   max_search_results: 5
   content_preview_length: 200
+  
+  # HTTP headers for GitBook API
+  headers:
+    Authorization: "Bearer gb_api_BMgZp9gn6kS3fibMnYwgpCFfgfW9RDfaHbIM5Hsm"
+    Content-Type: "application/json"
+    Accept: "application/json"
+    User-Agent: "GEM-OS/2.0.0"
+  
+  # OpenAPI specification
+  openapi_spec: "aluno.uniasselvi.com-api"
+  
+  # HTTP headers
+  headers:
+    Authorization: "Bearer YOUR_GITBOOK_TOKEN"
+    X-GitBook-Version: "v1"

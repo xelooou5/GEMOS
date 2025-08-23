@@ -81,6 +81,7 @@ MultiAIHandler = safe_import("integrations.ai.multi_ai_handler", "MultiAIHandler
 CollaborationManager = safe_import("integrations.ai.collaboration_manager", "CollaborationManager")
 NotionIntegration = safe_import("integrations.notion_mcp", "NotionIntegration")
 GitBookIntegration = safe_import("integrations.gitbook_mcp", "GitBookIntegration")
+MCPConnectorManager = safe_import("integrations.mcp_connectors", "MCPConnectorManager")
 
 # Import Gemini's Enhanced AI Bridge
 EnhancedAIBridge = safe_import("bridge.ai_bridge", "EnhancedAIBridge")
@@ -145,6 +146,7 @@ class GEMVoiceAssistant:
         self.collaboration_manager: Optional[CollaborationManager] = None
         self.notion: Optional[NotionIntegration] = None
         self.gitbook: Optional[GitBookIntegration] = None
+        self.mcp_connectors: Optional[MCPConnectorManager] = None
         
         # Gemini's Enhanced AI Bridge System
         self.gemini_bridge: Optional[EnhancedAIBridge] = None
@@ -223,6 +225,9 @@ class GEMVoiceAssistant:
         
         # Initialize GitBook integration
         self.gitbook = await self._initialize_component(GitBookIntegration, "GitBook MCP Integration", self.config_manager)
+        
+        # Initialize MCP connectors
+        self.mcp_connectors = await self._initialize_component(MCPConnectorManager, "MCP Connectors", self.config_manager)
 
         # Link audio events to our logic
         self._setup_callbacks()
@@ -535,6 +540,9 @@ class GEMVoiceAssistant:
         
         if self.gitbook:
             await self.gitbook.shutdown()
+        
+        if self.mcp_connectors:
+            await self.mcp_connectors.shutdown()
         
         self.logger.info("✅ Shutdown complete")
 

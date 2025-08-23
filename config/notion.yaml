@@ -18,3 +18,9 @@ notion:
   default_parent_id: null
   max_search_results: 5
   content_preview_length: 200
+  
+  # HTTP headers
+  headers:
+    Authorization: "Bearer YOUR_TOKEN_HERE"
+    X-API-Version: "2022-06-28"
+    Notion-Version: "2022-06-28"
