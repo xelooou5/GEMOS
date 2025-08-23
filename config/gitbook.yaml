@@ -1,0 +1,19 @@
+# GitBook MCP Integration Configuration
+gitbook:
+  enabled: true
+  mcp_url: "https://mcp.gitbook.com"
+  connection_type: "streamable_http"
+  timeout: 30
+  retry_attempts: 3
+  
+  # Voice commands
+  wake_words:
+    - "gitbook"
+    - "documentation"
+    - "docs"
+    - "guide"
+    - "manual"
+  
+  # Settings
+  max_search_results: 5
+  content_preview_length: 200
