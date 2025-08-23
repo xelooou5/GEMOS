@@ -1,0 +1,69 @@
+# GEM OS Enhanced Development Configuration
+
+general:
+  debug_mode: true
+  log_level: "DEBUG"
+  development_mode: true
+  ai_enhanced: true
+
+ai_providers:
+  github_copilot:
+    enabled: true
+    api_key: "${GITHUB_COPILOT_KEY}"
+  
+  microsoft_copilot:
+    enabled: true
+    api_key: "${MS_COPILOT_KEY}"
+  
+  gemini:
+    enabled: true
+    api_key: "${GEMINI_API_KEY}"
+  
+  claude:
+    enabled: true
+    api_key: "${CLAUDE_API_KEY}"
+  
+  ollama:
+    enabled: true
+    base_url: "http://localhost:11434"
+
+integrations:
+  education:
+    datacamp:
+      enabled: true
+      api_key: "${DATACAMP_API_KEY}"
+    
+    skillshare:
+      enabled: true
+      api_key: "${SKILLSHARE_API_KEY}"
+  
+  health:
+    calm:
+      enabled: true
+      api_key: "${CALM_API_KEY}"
+    
+    headspace:
+      enabled: true
+      api_key: "${HEADSPACE_API_KEY}"
+  
+  productivity:
+    notion:
+      enabled: true
+      api_key: "${NOTION_API_KEY}"
+    
+    microsoft365:
+      enabled: true
+      api_key: "${MS365_API_KEY}"
+
+cloud:
+  aws:
+    enabled: true
+    region: "us-east-1"
+    access_key: "${AWS_ACCESS_KEY}"
+    secret_key: "${AWS_SECRET_KEY}"
+  
+  azure:
+    enabled: true
+    subscription_id: "${AZURE_SUBSCRIPTION_ID}"
+    client_id: "${AZURE_CLIENT_ID}"
+    client_secret: "${AZURE_CLIENT_SECRET}"

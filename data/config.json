@@ -1,0 +1,56 @@
+{
+  "general": {
+    "language": "pt-BR",
+    "user_name": "Usuário GEM",
+    "log_level": "INFO",
+    "default_browser": null,
+    "active_profile": "default",
+    "data_dir": "data"
+  },
+  "audio": {
+    "input_device": "default",
+    "output_device": "default",
+    "sample_rate": 16000,
+    "frame_length_ms": 30,
+    "vad_aggressiveness": 3,
+    "hotword_enabled": false,
+    "picovoice_access_key": null,
+    "hotword_model_path": null,
+    "silence_timeout_s": 1.5,
+    "volume": 0.8
+  },
+  "llm": {
+    "provider": "ollama",
+    "model": "llama3",
+    "api_key": null,
+    "base_url": null,
+    "temperature": 0.7,
+    "max_tokens": 2048,
+    "system_prompt": "Você é o GEM OS, um assistente de IA útil e amigável. Responda de forma concisa e útil."
+  },
+  "stt": {
+    "provider": "faster_whisper",
+    "model": "small",
+    "language": "pt",
+    "model_path": null
+  },
+  "tts": {
+    "provider": "edge_tts",
+    "voice": "pt-BR-ThalitaNeural",
+    "language": "pt-BR",
+    "speed": 1.0
+  },
+  "accessibility": {
+    "high_contrast_mode": false,
+    "font_size_multiplier": 1.0,
+    "screen_reader_enabled": false
+  },
+  "storage": {
+    "database_path": "data/user_data.db"
+  },
+  "notifications": {
+    "enable_audio_notifications": true,
+    "enable_visual_notifications": true,
+    "notification_display_time_s": 5
+  }
+}

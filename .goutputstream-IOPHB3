@@ -1,0 +1,26 @@
+├── 1 gem_runner.sh # O script que você aprimorou para iniciar o projeto
+├── 2 requirements.txt # Lista de bibliotecas Python necessárias
+├── 3 gem.py # O novo script principal, mais limpo
+├── core/
+│ ├── 4 audio_system.py # Tudo sobre microfone e som
+│ ├── 5 command_executor.py# O cérebro que executa os comandos de voz
+│ ├── 6 config_manager.py # Gerencia as configurações globais
+│ ├── 7 llm_handler.py # Lida com a integração com o Ollama
+│ ├── 8 stt_module.py # Transforma a fala em texto
+│ └── 9 tts_module.py # Transforma o texto em fala
+├── features/
+│ ├── 10 accessibility_tools.py # Ferramentas para acessibilidade (leitura de tela, etc.)
+│ └── 11 learning_tools.py # Ferramentas para educação e aprendizado
+└── data/
+├── 12 wake_word_model.json # O modelo treinado para 'Hey GEM'
+├── 13 user_data.db # Banco de dados local para persistência 14 - transctription_engine.py i want to go file by file code by code gemini partner all modules are in the requirements, please lets do it again um by one, 1 to 14 if you need add more 15 16 17 files, i dont know, but everything needs to be in its place before we test, so please remember all functions softwares dependencies etc... and lets do it again thankyou partner └── book_library/
+look at this conversation with gemini https://gemini.google.com/app/5b5ded46c2ba226f
+https://gist.github.com/xelooou/b67f5f2937ce5f3e7a56c23177a1554f
+https://gemini.google.com/app/d5cb598535f3f80d
+https://g.co/gemini/share/08dad94d7f81
+https://chatgpt.com/share/68a8372a-2770-8006-a423-76174e737eb9
+https://claude.ai/chat/edf2ebd0-08fe-4ad7-96fc-951d650b6324
+https://claude.ai/chat/d17f59b8-afc3-4cb8-8367-ba2dbe1c93af
+https://claude.ai/chat/d17f59b8-afc3-4cb8-8367-ba2dbe1c93af
+https://claude.ai/chat/59a301ea-e750-495b-93f3-63edc30e8a5c
+

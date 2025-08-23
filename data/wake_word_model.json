@@ -1,0 +1,29 @@
+{
+    "wake_word": "hey gem",
+    "model_name": "Hey GEM - Modelo MFCC Personalizado",
+    "hotword_type": "MFCC-Threshold",
+    "version": "1.0",
+    "trained_at": "2025-08-22T00:00:00Z",
+    "engine": "mfcc-threshold",
+    "audio": {
+        "sample_rate": 16000,
+        "frame_size": 512,
+        "num_mfcc": 13,
+        "sensitivity": 0.65,
+        "energy_threshold": 300
+    },
+    "features": {
+        "mfcc_vectors": [
+            [12.1, -3.4, 0.9, 1.2, -0.5, 0.3, 0.1, -0.2, -0.4, 0.8, 1.1, -0.7, 0.0],
+            [11.8, -3.2, 0.8, 1.3, -0.6, 0.4, 0.2, -0.3, -0.5, 0.7, 1.0, -0.8, 0.1],
+            [12.0, -3.3, 1.0, 1.1, -0.4, 0.2, 0.3, -0.1, -0.6, 0.9, 1.2, -0.6, 0.2]
+        ]
+    },
+    "language": "pt-BR",
+    "description": "Modelo de palavra de ativação personalizado 'Hey GEM' baseado em características MFCC (Mel-frequency cepstral coefficients) e detecção de limiar de energia. Ideal para operação offline independente.",
+    "training_notes": "Este ficheiro JSON contém os parâmetros e as características MFCC do modelo de palavra de ativação. Não depende de um ficheiro .ppn externo e inclui um método de fallback para detecção de energia.",
+    "fallback": {
+        "method": "energy_threshold",
+        "description": "Se o modelo de palavra de ativação não estiver disponível, use a deteção de energia RMS acima de um limiar."
+    }
+}
