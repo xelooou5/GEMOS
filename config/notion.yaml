@@ -1,0 +1,20 @@
+# Notion MCP Integration Configuration
+notion:
+  enabled: true
+  mcp_url: "https://mcp.notion.com/mcp"
+  connection_type: "streamable_http"  # streamable_http, sse, stdio
+  timeout: 30
+  retry_attempts: 3
+  
+  # Voice commands
+  wake_words:
+    - "notion"
+    - "notes" 
+    - "workspace"
+    - "page"
+    - "database"
+  
+  # Default settings
+  default_parent_id: null
+  max_search_results: 5
+  content_preview_length: 200

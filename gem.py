@@ -79,6 +79,7 @@ AICompanion = safe_import("features.ai_companion", "AICompanion")
 # Import AI integrations
 MultiAIHandler = safe_import("integrations.ai.multi_ai_handler", "MultiAIHandler")
 CollaborationManager = safe_import("integrations.ai.collaboration_manager", "CollaborationManager")
+NotionIntegration = safe_import("integrations.notion_mcp", "NotionIntegration")
 
 # Import Gemini's Enhanced AI Bridge
 EnhancedAIBridge = safe_import("bridge.ai_bridge", "EnhancedAIBridge")
@@ -141,6 +142,7 @@ class GEMVoiceAssistant:
         self.multi_ai_handler: Optional[MultiAIHandler] = None
         self.ai_bridge: Optional[Any] = None
         self.collaboration_manager: Optional[CollaborationManager] = None
+        self.notion: Optional[NotionIntegration] = None
         
         # Gemini's Enhanced AI Bridge System
         self.gemini_bridge: Optional[EnhancedAIBridge] = None
@@ -213,6 +215,9 @@ class GEMVoiceAssistant:
         
         # Initialize Gemini's Enhanced AI Bridge
         await self._initialize_gemini_bridge()
+        
+        # Initialize Notion integration
+        self.notion = await self._initialize_component(NotionIntegration, "Notion MCP Integration", self.config_manager)
 
         # Link audio events to our logic
         self._setup_callbacks()
@@ -519,6 +524,9 @@ class GEMVoiceAssistant:
         
         if self.collaboration_manager:
             self.collaboration_manager.shutdown()
+        
+        if self.notion:
+            await self.notion.shutdown()
         
         self.logger.info("✅ Shutdown complete")
 
