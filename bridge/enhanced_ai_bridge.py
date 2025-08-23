@@ -80,6 +80,15 @@ class EnhancedAIBridge:
             messages = messages[-last_n:]
         return messages
 
+    def acknowledge_message(self, acknowledger: str, message_to_ack: dict):
+        """Acknowledge a message from another AI"""
+        ack_message = f"Message acknowledged by {acknowledger}"
+        self.send_message(
+            sender=acknowledger,
+            message=ack_message,
+            recipients=[message_to_ack.get('sender', 'unknown')]
+        )
+
     def _append_to_channel(self, channel: Path, message: dict):
         try:
             messages = self._read_channel(channel)

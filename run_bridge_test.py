@@ -5,7 +5,7 @@
 Initializes and tests the AI collaboration bridge.
 """
 
-from bridge.ai_bridge import EnhancedAIBridge
+from bridge.enhanced_ai_bridge import EnhancedAIBridge
 from bridge.ai_agents import GeminiAgent, CopilotAgent, AmazonQAgent
 import time
 
@@ -50,7 +50,7 @@ def main():
     time.sleep(1)
 
     print("\n--- 📜 Final Shared Log Review ---")
-    shared_messages = bridge.get_messages(channel_name='shared', last_n=10)
+    shared_messages = bridge.get_messages(ai_name=None, last_n=10)
 
     if not shared_messages:
         print("No messages found in the shared log.")

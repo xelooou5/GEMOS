@@ -68,6 +68,15 @@ detect_system() {
     success "System: $OS, Python: $PYTHON_VERSION"
 }
 
+# Activate virtual environment based on OS
+activate_venv() {
+    if [[ "$OS" == "windows" ]]; then
+        source "$VENV_PATH/Scripts/activate"
+    else
+        source "$VENV_PATH/bin/activate"
+    fi
+}
+
 # Create virtual environment
 setup_venv() {
     log "🐍 Setting up Python virtual environment..."
@@ -80,7 +89,7 @@ setup_venv() {
     fi
     
     # Activate virtual environment
-    source "$VENV_PATH/bin/activate"
+    activate_venv
     
     # Upgrade pip
     pip install --upgrade pip setuptools wheel
@@ -131,7 +140,7 @@ install_system_deps() {
 install_python_deps() {
     log "🔧 Installing Python dependencies..."
     
-    source "$VENV_PATH/bin/activate"
+    activate_venv
     
     # Install requirements
     if [[ -f "$PROJECT_ROOT/requirements.txt" ]]; then
@@ -154,9 +163,23 @@ setup_ollama() {
     
     # Start Ollama service
     if ! pgrep -x "ollama" > /dev/null; then
-        log "Starting Ollama service..."
+        log "Starting Ollama service in the background..."
         ollama serve &
-        sleep 5
+        OLLAMA_PID=$!
+        # Ensure Ollama is terminated if the script exits prematurely during setup
+        trap "log 'Stopping Ollama service...'; kill $OLLAMA_PID 2>/dev/null" EXIT
+
+        log "Waiting for Ollama to be ready..."
+        # Wait up to 30 seconds for the service to respond
+        for i in {1..30}; do
+            if curl --silent --output /dev/null http://localhost:11434; then
+                success "Ollama service is running."
+                break
+            fi
+            sleep 1
+        done
+        # Remove the trap if Ollama started successfully and we are proceeding
+        trap - EXIT
     fi
     
     # Pull required models
@@ -169,12 +192,13 @@ setup_ollama() {
 create_directories() {
     log "📁 Creating directory structure..."
     
-    mkdir -p "$PROJECT_ROOT"/{data/{models,database,logs,backups},tests,scripts,docs}
+    mkdir -p "$PROJECT_ROOT"/{core,features,engines,bridge,tests,scripts,docs,data/{models,database,logs,backups}}
     
     # Create __init__.py files
     touch "$PROJECT_ROOT/core/__init__.py"
     touch "$PROJECT_ROOT/features/__init__.py"
     touch "$PROJECT_ROOT/engines/__init__.py"
+    touch "$PROJECT_ROOT/bridge/__init__.py"
     touch "$PROJECT_ROOT/tests/__init__.py"
     
     success "Directory structure created"
@@ -184,7 +208,7 @@ create_directories() {
 run_tests() {
     log "🧪 Running tests..."
     
-    source "$VENV_PATH/bin/activate"
+    activate_venv
     cd "$PROJECT_ROOT"
     
     if [[ -d "tests" ]]; then
@@ -198,7 +222,7 @@ run_tests() {
 start_gem() {
     log "🚀 Starting GEM OS..."
     
-    source "$VENV_PATH/bin/activate"
+    activate_venv
     cd "$PROJECT_ROOT"
     
     python gem.py "$@"
@@ -208,7 +232,7 @@ start_gem() {
 dev_mode() {
     log "🔧 Starting development mode..."
     
-    source "$VENV_PATH/bin/activate"
+    activate_venv
     cd "$PROJECT_ROOT"
     
     python gem.py --debug "$@"
@@ -288,12 +312,10 @@ main() {
             backup_data
             ;;
         "voice-test")
-            source "$VENV_PATH/bin/activate"
-            python gem.py --voice-test
+            start_gem --voice-test
             ;;
         "audio-test")
-            source "$VENV_PATH/bin/activate"
-            python gem.py --audio-test
+            start_gem --audio-test
             ;;
         "help"|"-h"|"--help")
             show_help

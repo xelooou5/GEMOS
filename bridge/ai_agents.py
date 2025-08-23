@@ -5,7 +5,7 @@
 Standardized classes for each AI to interact with the bridge.
 """
 
-from .ai_bridge import EnhancedAIBridge
+from .enhanced_ai_bridge import EnhancedAIBridge
 from typing import List, Dict, Any
 
 class AIAgent:
@@ -24,12 +24,12 @@ class AIAgent:
         # Default recipients are all other AIs
         if recipients is None:
             recipients = [ai for ai in self.bridge.channels.keys() if ai not in [self.name, 'shared']]
-        self.bridge.send_message(sender=self.name, content=content, recipients=recipients)
+        self.bridge.send_message(sender=self.name, message=content, recipients=recipients)
 
     def review_shared_log(self, last_n: int = 20) -> List[Dict[str, Any]]:
         """Reviews the shared communication channel."""
         print(f"[{self.name}] Reviewing the last {last_n} messages from the shared log...")
-        return self.bridge.get_messages(channel_name='shared', last_n=last_n)
+        return self.bridge.get_messages(ai_name=None, last_n=last_n)
 
     def acknowledge(self, message: Dict[str, Any]):
         """Acknowledges a specific message from another agent."""
