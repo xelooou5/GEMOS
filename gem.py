@@ -91,8 +91,7 @@ CopilotAgent = safe_import("bridge.ai_agents", "CopilotAgent")
 
 # Enhanced AI Bridge Integration
 try:
-    sys.path.append('/home/oem')
-    from amazon_q_enhanced import AmazonQIntegration
+    from bridge.amazon_q_enhanced import AmazonQIntegration
     AI_BRIDGE_AVAILABLE = True
 except ImportError:
     AI_BRIDGE_AVAILABLE = False
