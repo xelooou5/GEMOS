@@ -1,11 +1,18 @@
-Name: Workflow_e6bb
+Name: GEM_OS_CI_CD
 SchemaVersion: "1.0"
 
-# Optional - Set automatic triggers.
 Triggers:
-  - Type: Push
+  - Type: PUSH
     Branches:
-      - master
+      - main
 
-# Required - Define action configurations.
 Actions:
+  Build:
+    Identifier: aws/build@v1
+    Inputs:
+      Sources:
+        - WorkflowSource
+    Configuration:
+      Steps:
+        - Run: echo "Building GEM OS"
+        - Run: python3 --version
