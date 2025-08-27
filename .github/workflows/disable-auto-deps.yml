@@ -1,0 +1,15 @@
+name: Disable Auto Dependency Submission
+
+on:
+  push:
+  pull_request:
+
+env:
+  GH_DEPENDENCY_SUBMISSION_SKIP_CACHE: true
+
+jobs:
+  disable:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Skip automatic dependency submission
+      run: echo "Automatic dependency submission disabled"
