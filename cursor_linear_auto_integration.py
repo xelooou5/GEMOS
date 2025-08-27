@@ -79,7 +79,8 @@ class CursorLinearIntegration:
         variables = {
             "input": {
                 "title": issue_data["title"],
-                "description": issue_data["description"]
+                "description": issue_data["description"],
+                "teamId": "eea25d18-2cb2-46af-b060-4c1d2e91115c"
             }
         }
         
