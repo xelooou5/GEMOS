@@ -254,6 +254,9 @@ class GemDaemon:
                 # Linear OAuth integration
                 subprocess.run(["python3", "linear_oauth_daemon.py"], cwd=self.project_root, timeout=60)
                 
+                # Linear Agent integration
+                subprocess.run(["python3", "linear_agent_integration.py"], cwd=self.project_root, timeout=60)
+                
                 # GitHub integration hub
                 subprocess.run(["python3", "github_integration_hub.py"], cwd=self.project_root, timeout=60)
                 
