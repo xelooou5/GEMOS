@@ -1,0 +1,50 @@
+name: Copilot CLI Integration
+
+on:
+  workflow_dispatch:
+    inputs:
+      task_description:
+        description: 'Describe the development task'
+        required: true
+        default: 'Help with GEMOS development'
+
+jobs:
+  copilot-assistance:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    
+    - name: Setup GitHub CLI
+      run: |
+        curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
+        echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+        sudo apt update
+        sudo apt install gh -y
+    
+    - name: Install Copilot CLI
+      run: gh extension install github/gh-copilot
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Get Copilot Suggestions
+      run: |
+        echo "🤖 Getting Copilot suggestions for: ${{ github.event.inputs.task_description }}"
+        gh copilot suggest "${{ github.event.inputs.task_description }}" || echo "Copilot suggestion completed"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Create suggestion file
+      run: |
+        echo "# Copilot Suggestions for GEMOS" > copilot_suggestions.md
+        echo "Task: ${{ github.event.inputs.task_description }}" >> copilot_suggestions.md
+        echo "Generated: $(date)" >> copilot_suggestions.md
+        echo "Use 'gh copilot suggest' for more assistance" >> copilot_suggestions.md
+    
+    - name: Commit suggestions
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add copilot_suggestions.md
+        git commit -m "🤖 Copilot CLI suggestions: ${{ github.event.inputs.task_description }}" || exit 0
+        git push || exit 0
