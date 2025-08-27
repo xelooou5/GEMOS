@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gemos"
+version = "1.0.0"
+description = "GEM OS - Generative Enhanced Microphone Operating System"
+authors = [{name = "xelooou5"}]
+license = {text = "MIT"}
+requires-python = ">=3.8"
+dependencies = [
+    "pyttsx3==2.90",
+    "speechrecognition==3.10.0",
+    "pyaudio==0.2.11",
+    "faster-whisper==0.10.0",
+    "boto3==1.34.0",
+    "python-dotenv==1.0.0",
+    "numpy==1.24.3",
+    "requests==2.31.0",
+    "asyncio-mqtt==0.16.1",
+    "aiofiles==23.2.1",
+]
+
+[project.urls]
+Homepage = "https://github.com/xelooou5/GEMOS"
+Repository = "https://github.com/xelooou5/GEMOS"
