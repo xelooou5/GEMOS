@@ -11,7 +11,7 @@ import pyaudio
 from pathlib import Path
 from core.stt_module import STTModule
 from core.tts_module import TTSModule
-from core.config_manager import ConfigManager
+from core.config_manager import GEMConfigManager as ConfigManager
 
 class VoiceSystem:
     """Complete voice system for GEM OS"""
