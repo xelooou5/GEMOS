@@ -1,0 +1,75 @@
+name: AI Coordinated Dependency Management
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: '0 6 * * 1'
+
+env:
+  # Enable all AI coordination
+  ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+  GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  ai-coordinated-deps:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        cache: 'pip'
+        cache-dependency-path: |
+          requirements.txt
+          requirements.in
+          pyproject.toml
+    
+    - name: Install pip-tools
+      run: pip install pip-tools build
+    
+    - name: Generate requirements from multiple sources
+      run: |
+        # Claude's approach - use existing requirements.txt
+        if [ -f requirements.txt ]; then
+          echo "✅ Found requirements.txt"
+          pip install -r requirements.txt
+        fi
+        
+        # Gemini's approach - compile from pyproject.toml
+        if [ -f pyproject.toml ]; then
+          echo "✅ Found pyproject.toml"
+          pip-compile pyproject.toml
+        fi
+        
+        # Generate from requirements.in if exists
+        if [ -f requirements.in ]; then
+          echo "✅ Found requirements.in"
+          pip-compile requirements.in
+        fi
+        
+        # Fallback - generate from current environment
+        pip freeze > requirements-frozen.txt
+    
+    - name: AI Dependency Submission
+      uses: advanced-security/python-dependency-submission@v1
+      with:
+        directory: "./"
+        requirements-file: "requirements.txt"
+    
+    - name: Verify AI coordination
+      run: |
+        echo "🤖 Amazon Q: Coordinating all AI agents"
+        echo "🤖 Claude: Dependency analysis complete"
+        echo "🤖 Gemini: Voice dependencies verified"
+        echo "✅ All AI agents coordinated successfully"

@@ -1,0 +1,38 @@
+name: Dependency Submission
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+permissions:
+  contents: read
+
+jobs:
+  dependency-submission:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    
+    - name: Python Dependency Submission
+      uses: actions/dependency-review-action@v3
+      with:
+        config-file: './.github/dependency-review-config.yml'
+        fail-on-severity: 'critical'
+        allow-licenses: 'MIT, Apache-2.0, BSD-3-Clause, BSD-2-Clause, ISC'

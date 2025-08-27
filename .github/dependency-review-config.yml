@@ -1,0 +1,24 @@
+reviewers:
+  - xelooou5
+
+fail_on_severity: 'critical'
+
+allow_licenses:
+  - 'MIT'
+  - 'Apache-2.0'
+  - 'BSD-3-Clause'
+  - 'BSD-2-Clause'
+  - 'ISC'
+  - 'GPL-3.0'
+
+deny_licenses:
+  - 'GPL-2.0'
+  - 'AGPL-3.0'
+
+allow_dependencies_licenses:
+  - 'MIT'
+  - 'Apache-2.0'
+  - 'BSD-3-Clause'
+
+allow_ghsas:
+  - 'GHSA-xxxx-xxxx-xxxx'

@@ -1,0 +1,19 @@
+# GEM OS Base Dependencies
+pyttsx3
+speechrecognition
+pyaudio
+faster-whisper
+boto3
+python-dotenv
+numpy
+requests
+asyncio-mqtt
+aiofiles
+sounddevice
+google-cloud-speech
+google-generativeai
+pvporcupine
+webrtcvad-wheels
+beautifulsoup4
+anthropic
+openai
