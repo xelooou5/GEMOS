@@ -1,17 +1,18 @@
 {
   "linear_webhook": {
     "url": "https://de1a63c5cc4e.ngrok-free.app/linear/webhook",
-    "events": ["issue.create", "issue.update", "comment.create"],
-    "secret": "${LINEAR_WEBHOOK_SECRET}"
+    "events": [
+      "issue.create",
+      "issue.update",
+      "comment.create"
+    ]
   },
   "slack_webhook": {
     "url": "https://de1a63c5cc4e.ngrok-free.app/slack/events",
-    "events": ["message", "app_mention", "reaction_added"],
-    "secret": "${SLACK_WEBHOOK_SECRET}"
-  },
-  "github_webhook": {
-    "url": "https://de1a63c5cc4e.ngrok-free.app/github/webhook",
-    "events": ["push", "pull_request", "issues"],
-    "secret": "${GITHUB_WEBHOOK_SECRET}"
+    "events": [
+      "message",
+      "app_mention",
+      "reaction_added"
+    ]
   }
 }
