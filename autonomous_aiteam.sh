@@ -1,0 +1,1 @@
+/home/oem/gem/autonomous_aiteam.sh

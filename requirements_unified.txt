@@ -1,0 +1,38 @@
+# 💎 GEM OS - UNIFIED REQUIREMENTS
+# Essential dependencies for the unified system
+
+# === CORE DEPENDENCIES ===
+python-dotenv>=1.0.0
+asyncio-mqtt>=0.16.0
+
+# === AI SERVICES ===
+openai>=1.0.0
+google-generativeai>=0.3.0
+
+# === AUDIO PROCESSING ===
+pyaudio>=0.2.11
+pyttsx3>=2.90
+SpeechRecognition>=3.10.0
+
+# === WEB REQUESTS ===
+aiohttp>=3.8.0
+requests>=2.31.0
+
+# === DATA HANDLING ===
+python-dateutil>=2.8.0
+pydantic>=2.0.0
+
+# === LOGGING & MONITORING ===
+colorlog>=6.7.0
+
+# === OPTIONAL DEPENDENCIES ===
+# Uncomment if needed:
+# whisper>=1.0.0  # For advanced speech recognition
+# pygame>=2.5.0   # For audio playback
+# tkinter          # For GUI (usually included with Python)
+
+# === DEVELOPMENT DEPENDENCIES ===
+# Uncomment for development:
+# pytest>=7.0.0
+# black>=23.0.0
+# flake8>=6.0.0

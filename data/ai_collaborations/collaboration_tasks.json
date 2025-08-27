@@ -1,0 +1,47 @@
+[
+  {
+    "task": "Create accessibility_nvda.py",
+    "collaborators": [
+      "Amazon Q",
+      "Claude",
+      "GitHub Copilot"
+    ],
+    "priority": "high"
+  },
+  {
+    "task": "Create language_manager.py",
+    "collaborators": [
+      "Amazon Q",
+      "Gemini",
+      "TabNine"
+    ],
+    "priority": "high"
+  },
+  {
+    "task": "Create async_patterns.py",
+    "collaborators": [
+      "TabNine",
+      "Cursor",
+      "Amazon Q"
+    ],
+    "priority": "medium"
+  },
+  {
+    "task": "Create accessible_ui_components.py",
+    "collaborators": [
+      "Claude",
+      "GitHub Copilot",
+      "Amazon Q"
+    ],
+    "priority": "high"
+  },
+  {
+    "task": "Create unified_ai_coordinator.py",
+    "collaborators": [
+      "Amazon Q",
+      "Gemini",
+      "Cursor"
+    ],
+    "priority": "critical"
+  }
+]

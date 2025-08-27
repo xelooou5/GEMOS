@@ -1,0 +1,47 @@
+{
+  "agent": "Amazon Q",
+  "analysis_focus": "Coordination analysis",
+  "areas_to_analyze": [
+    "Overall system",
+    "Team coordination",
+    "Project status"
+  ],
+  "planning_focus": "What coordination is needed",
+  "timestamp": "2025-08-27T14:13:43.318656",
+  "status": "pending_real_agent_analysis",
+  "folder_analysis": {
+    "gem_folder": "",
+    "home_folder": "",
+    "key_files_found": [],
+    "missing_files": [],
+    "file_types_analyzed": []
+  },
+  "urgent_needs": {
+    "critical_priority": [],
+    "high_priority": [],
+    "medium_priority": []
+  },
+  "what_agent_can_do": {
+    "immediate_tasks": [],
+    "this_week_tasks": [],
+    "expertise_contribution": ""
+  },
+  "what_human_can_help": {
+    "resources_needed": [],
+    "tools_to_install": [],
+    "apis_to_get": [],
+    "documentation_needed": []
+  },
+  "next_steps": {
+    "step_1": "",
+    "step_2": "",
+    "step_3": "",
+    "timeline": ""
+  },
+  "collaboration_needed": {
+    "need_help_from": [],
+    "can_help_others_with": [],
+    "shared_tasks": []
+  },
+  "WARNING": "AMAZON Q CANNOT FILL THIS - AGENT MUST ANALYZE THEMSELVES"
+}

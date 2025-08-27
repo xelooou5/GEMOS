@@ -1,0 +1,15 @@
+{
+  "agent": "Amazon Q",
+  "question": "reresh",
+  "request_id": "help_1756317659",
+  "timestamp": "2025-08-27T15:00:59.686836",
+  "status": "pending_real_agent_response",
+  "agent_response": "",
+  "solution": "",
+  "code_example": "",
+  "next_steps": "",
+  "can_help_with": "",
+  "needs_from_human": "",
+  "WARNING": "AMAZON Q CANNOT FILL THIS - AGENT MUST RESPOND THEMSELVES",
+  "RULE": "Each agent has their own processing unit and must answer"
+}

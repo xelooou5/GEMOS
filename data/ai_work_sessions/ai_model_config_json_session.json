@@ -1,0 +1,40 @@
+{
+  "file": "ai_model_config.json",
+  "assigned_agents": [
+    "Gemini",
+    "TabNine",
+    "Amazon Q"
+  ],
+  "status": "active",
+  "started": "2025-08-27T14:07:44.706608",
+  "contributions": {
+    "Gemini": {
+      "agent": "Gemini",
+      "file": "ai_model_config.json",
+      "contribution_type": "",
+      "content": "",
+      "expertise_applied": "",
+      "timestamp": "2025-08-27T14:07:44.706622",
+      "status": "pending_real_agent_input"
+    },
+    "TabNine": {
+      "agent": "TabNine",
+      "file": "ai_model_config.json",
+      "contribution_type": "",
+      "content": "",
+      "expertise_applied": "",
+      "timestamp": "2025-08-27T14:07:44.706664",
+      "status": "pending_real_agent_input"
+    },
+    "Amazon Q": {
+      "agent": "Amazon Q",
+      "file": "ai_model_config.json",
+      "contribution_type": "",
+      "content": "",
+      "expertise_applied": "",
+      "timestamp": "2025-08-27T14:07:44.706708",
+      "status": "pending_real_agent_input"
+    }
+  },
+  "current_content": ""
+}

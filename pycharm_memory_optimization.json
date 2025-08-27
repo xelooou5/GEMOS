@@ -1,0 +1,19 @@
+{
+  "vm_options": [
+    "-Xms2g",
+    "-Xmx8g",
+    "-XX:ReservedCodeCacheSize=1g",
+    "-XX:+UseConcMarkSweepGC",
+    "-XX:+CMSParallelRemarkEnabled",
+    "-XX:+AlwaysPreTouch",
+    "-XX:+UseCompressedOops",
+    "-XX:+UseCMSInitiatingOccupancyOnly",
+    "-XX:CMSInitiatingOccupancyFraction=70"
+  ],
+  "ide_settings": {
+    "memory_indicator": true,
+    "power_save_mode": false,
+    "file_cache_size": "1024",
+    "max_intellisense_filesize": "2500"
+  }
+}

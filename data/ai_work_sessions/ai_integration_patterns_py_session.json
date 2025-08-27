@@ -1,0 +1,40 @@
+{
+  "file": "ai_integration_patterns.py",
+  "assigned_agents": [
+    "Cursor",
+    "Copilot",
+    "Amazon Q"
+  ],
+  "status": "active",
+  "started": "2025-08-27T14:07:44.706800",
+  "contributions": {
+    "Cursor": {
+      "agent": "Cursor",
+      "file": "ai_integration_patterns.py",
+      "contribution_type": "",
+      "content": "",
+      "expertise_applied": "",
+      "timestamp": "2025-08-27T14:07:44.706812",
+      "status": "pending_real_agent_input"
+    },
+    "Copilot": {
+      "agent": "Copilot",
+      "file": "ai_integration_patterns.py",
+      "contribution_type": "",
+      "content": "",
+      "expertise_applied": "",
+      "timestamp": "2025-08-27T14:07:44.706850",
+      "status": "pending_real_agent_input"
+    },
+    "Amazon Q": {
+      "agent": "Amazon Q",
+      "file": "ai_integration_patterns.py",
+      "contribution_type": "",
+      "content": "",
+      "expertise_applied": "",
+      "timestamp": "2025-08-27T14:07:44.706887",
+      "status": "pending_real_agent_input"
+    }
+  },
+  "current_content": ""
+}

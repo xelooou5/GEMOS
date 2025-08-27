@@ -1,0 +1,127 @@
+{
+  "ai_models": {
+    "primary_llm": {
+      "provider": "ollama",
+      "model": "phi3:mini",
+      "temperature": 0.7,
+      "max_tokens": 2048,
+      "context_window": 4096,
+      "purpose": "Main conversation AI",
+      "configured_by": "Gemini + Amazon Q"
+    },
+    "backup_llm": {
+      "provider": "gemini",
+      "model": "gemini-1.5-flash",
+      "api_key": "${GEMINI_API_KEY}",
+      "temperature": 0.6,
+      "max_tokens": 1024,
+      "purpose": "Fallback when Ollama unavailable",
+      "configured_by": "Gemini"
+    },
+    "nvidia_models": {
+      "provider": "nvidia_ngc",
+      "api_key": "${NVIDIA_NGC_API_KEY}",
+      "available_models": [
+        "nvidia/llama-3.1-nemotron-70b-instruct",
+        "nvidia/llama-3.1-nemotron-8b-instruct"
+      ],
+      "purpose": "High-performance AI processing",
+      "configured_by": "Cursor + TabNine"
+    }
+  },
+  "speech_models": {
+    "stt_engines": {
+      "whisper": {
+        "model_size": "base",
+        "language": "auto",
+        "device": "cpu",
+        "purpose": "Primary speech recognition",
+        "optimized_by": "TabNine"
+      },
+      "vosk": {
+        "model_path": "models/vosk-model-small-en-us-0.15",
+        "sample_rate": 16000,
+        "purpose": "Offline speech recognition",
+        "optimized_by": "TabNine"
+      }
+    },
+    "tts_engines": {
+      "pyttsx3": {
+        "rate": 150,
+        "volume": 0.9,
+        "voice": "female",
+        "purpose": "Primary text-to-speech",
+        "accessibility_focused": true,
+        "configured_by": "Claude"
+      },
+      "edge_tts": {
+        "voice": "en-US-JennyNeural",
+        "rate": "+0%",
+        "pitch": "+0Hz",
+        "purpose": "High-quality TTS",
+        "configured_by": "Copilot"
+      }
+    }
+  },
+  "translation_models": {
+    "google_translate": {
+      "api_key": "${GOOGLE_TRANSLATE_API_KEY}",
+      "supported_languages": ["en", "pt", "es", "fr", "de"],
+      "purpose": "Real-time translation",
+      "configured_by": "Gemini"
+    },
+    "deepl": {
+      "api_key": "${DEEPL_API_KEY}",
+      "quality": "high",
+      "purpose": "High-quality European language translation",
+      "configured_by": "Gemini"
+    }
+  },
+  "accessibility_models": {
+    "nvda_integration": {
+      "api_endpoint": "local_nvda_service",
+      "features": ["speech", "braille", "navigation"],
+      "purpose": "Screen reader integration",
+      "configured_by": "Claude + Copilot"
+    },
+    "emergency_mode": {
+      "high_contrast": true,
+      "large_text": true,
+      "audio_only": true,
+      "purpose": "Emergency accessibility",
+      "configured_by": "Claude"
+    }
+  },
+  "performance_config": {
+    "async_patterns": {
+      "max_concurrent_tasks": 10,
+      "timeout_seconds": 30,
+      "retry_attempts": 3,
+      "purpose": "Async operation management",
+      "configured_by": "Cursor + TabNine"
+    },
+    "caching": {
+      "conversation_cache_size": 100,
+      "model_cache_enabled": true,
+      "translation_cache_ttl": 3600,
+      "purpose": "Performance optimization",
+      "configured_by": "TabNine"
+    }
+  },
+  "integration_config": {
+    "ai_coordinator": {
+      "primary_coordinator": "amazon_q",
+      "fallback_agents": ["gemini", "claude"],
+      "coordination_interval": 30,
+      "purpose": "AI agent coordination",
+      "configured_by": "Amazon Q + Cursor"
+    },
+    "cross_agent_communication": {
+      "message_queue_size": 1000,
+      "broadcast_enabled": true,
+      "help_request_priority": "high",
+      "purpose": "Agent collaboration",
+      "configured_by": "All agents"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+# 🔒 SECURITY - ONLY IGNORE ENV FILES
+.env
+.env.local
+.env.production
+
+# 🗂️ SYSTEM FILES
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+
+# 📊 LOGS
+*.log
