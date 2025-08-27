@@ -11,7 +11,15 @@ import pyaudio
 from pathlib import Path
 from core.stt_module import STTModule
 from core.tts_module import TTSModule
-from core.config_manager import GEMConfigManager as ConfigManager
+import os
+from pathlib import Path
+
+class SimpleConfig:
+    def __init__(self):
+        self.stt = type('STT', (), {'engine': 'whisper', 'model': 'base', 'language': 'pt-BR'})()
+        self.tts = type('TTS', (), {'engine': 'pyttsx3', 'rate': 150, 'language': 'pt-BR'})()
+
+ConfigManager = SimpleConfig
 
 class VoiceSystem:
     """Complete voice system for GEM OS"""

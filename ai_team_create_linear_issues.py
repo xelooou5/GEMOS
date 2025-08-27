@@ -75,11 +75,36 @@ class AITeamCreateIssues:
         }
         """
         
+        # Get team ID from Linear workspace
+        team_query = """
+        query {
+          teams {
+            nodes {
+              id
+              name
+            }
+          }
+        }
+        """
+        
+        team_response = requests.post(
+            'https://api.linear.app/graphql',
+            json={'query': team_query},
+            headers=headers
+        )
+        
+        team_id = None
+        if team_response.status_code == 200:
+            teams = team_response.json().get('data', {}).get('teams', {}).get('nodes', [])
+            if teams:
+                team_id = teams[0]['id']
+        
         variables = {
             "input": {
                 "title": issue_data["title"],
                 "description": issue_data["description"],
-                "priority": 1
+                "priority": 1,
+                "teamId": team_id
             }
         }
         
