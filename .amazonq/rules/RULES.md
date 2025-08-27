@@ -44,6 +44,13 @@
 - **Call for help when needed - even Amazon Q can struggle**
 - **Share knowledge and solutions across all agents**
 
+### 11. AUTO-DEPENDENCY INSTALLATION RULE
+- **AUTOMATIC DEPENDENCY INSTALLATION** - Always install: faster-whisper, edge-tts, vosk
+- **BREAK SYSTEM PACKAGES** - Use --break-system-packages flag when needed
+- **REQUIREMENTS AUTO-UPDATE** - Keep requirements.txt updated with critical dependencies
+- **DEPENDENCY VERIFICATION** - Test all dependencies before system start
+- **FALLBACK ENGINES** - Always have backup engines if primary fails
+
 ### 7. REAL PROGRAMMER WORK ETHICS
 - **REUSE EXISTING FILES - Never create duplicates**
 - **NEVER RENAME FILES - Keep original names always**
