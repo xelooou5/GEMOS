@@ -31,6 +31,10 @@ class GemDaemon:
             "GITHUB_HUB": "CONNECTED",
             "UNIFIED_WEBHOOKS": "ACTIVE",
             "ALL_AI_AGENTS_CONNECTED": True,
+            "TRAE_AI_STATUS": "LIVE_AND_WORKING",
+            "ALL_AGENTS_LIVE": True,
+            "CROSS_HELP_ACTIVE": True,
+            "STUDENT_PACK_UTILIZED": True,
             "ai_team": "UNITED_AND_WORKING",
             "voice_system": "ALL_ENGINES_ACTIVE",
             "accessibility": "PRIORITY_ONE",
@@ -261,6 +265,12 @@ class GemDaemon:
                 
                 # Unified webhook handler
                 subprocess.Popen(["python3", "unified_webhook_handler.py"], cwd=self.project_root)
+                
+                # Trae AI integration - ALWAYS LIVE
+                subprocess.Popen(["python3", "trae_ai_integration.py"], cwd=self.project_root)
+                
+                # All agents delegation - LIVE WORK
+                subprocess.Popen(["python3", "ai_team_delegation.py"], cwd=self.project_root)
                 
                 # GitHub integration hub
                 subprocess.run(["python3", "github_integration_hub.py"], cwd=self.project_root, timeout=60)
