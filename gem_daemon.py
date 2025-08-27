@@ -29,6 +29,8 @@ class GemDaemon:
             "NEVER_FORGET_SYSTEM": "ACTIVE",
             "LINEAR_OAUTH": "INTEGRATED",
             "GITHUB_HUB": "CONNECTED",
+            "UNIFIED_WEBHOOKS": "ACTIVE",
+            "ALL_AI_AGENTS_CONNECTED": True,
             "ai_team": "UNITED_AND_WORKING",
             "voice_system": "ALL_ENGINES_ACTIVE",
             "accessibility": "PRIORITY_ONE",
@@ -256,6 +258,9 @@ class GemDaemon:
                 
                 # Linear Agent integration
                 subprocess.run(["python3", "linear_agent_integration.py"], cwd=self.project_root, timeout=60)
+                
+                # Unified webhook handler
+                subprocess.Popen(["python3", "unified_webhook_handler.py"], cwd=self.project_root)
                 
                 # GitHub integration hub
                 subprocess.run(["python3", "github_integration_hub.py"], cwd=self.project_root, timeout=60)
