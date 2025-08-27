@@ -1,0 +1,44 @@
+{
+  "interface_type": "CROSS_HELP_SYSTEM",
+  "available_help_types": [
+    "Code review and feedback",
+    "Architecture guidance",
+    "Debugging assistance",
+    "Integration support",
+    "Performance optimization",
+    "Accessibility review",
+    "Security audit",
+    "Testing assistance"
+  ],
+  "help_request_process": [
+    "Agent identifies need for help",
+    "Creates help request with details",
+    "System routes to best available agent",
+    "Helper agent responds and collaborates",
+    "Solution is shared with all agents"
+  ],
+  "expertise_routing": {
+    "accessibility": [
+      "claude_anthropic"
+    ],
+    "voice_systems": [
+      "github_copilot",
+      "gemini_google"
+    ],
+    "integrations": [
+      "cursor_ai",
+      "trae_ai"
+    ],
+    "memory_systems": [
+      "tabnine_ai"
+    ],
+    "coordination": [
+      "amazon_q",
+      "trae_ai"
+    ],
+    "aws_services": [
+      "amazon_q",
+      "gemini_google"
+    ]
+  }
+}

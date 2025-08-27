@@ -1,0 +1,31 @@
+{
+  "live_cursor_sharing": {
+    "enabled": true,
+    "agents_can_see_each_other": true,
+    "real_time_editing": true
+  },
+  "instant_messaging": {
+    "enabled": true,
+    "group_chat": "all_agents_chat.json",
+    "private_messages": true,
+    "help_requests": true
+  },
+  "code_review_system": {
+    "enabled": true,
+    "automatic_review_requests": true,
+    "cross_agent_reviews": true,
+    "real_time_feedback": true
+  },
+  "pair_programming": {
+    "enabled": true,
+    "any_agent_can_pair": true,
+    "shared_terminals": true,
+    "voice_chat": true
+  },
+  "cross_help_notifications": {
+    "enabled": true,
+    "instant_alerts": true,
+    "help_request_routing": true,
+    "expertise_matching": true
+  }
+}

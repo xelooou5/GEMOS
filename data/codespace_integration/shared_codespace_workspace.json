@@ -1,0 +1,31 @@
+{
+  "workspace_url": "https://refactored-fortnight-974wg7649r5xcxw9.github.dev/",
+  "created": "2025-08-27T19:15:43.442992",
+  "connected_agents": [
+    "github_copilot",
+    "claude_anthropic",
+    "cursor_ai",
+    "tabnine_ai",
+    "gemini_google",
+    "trae_ai",
+    "amazon_q"
+  ],
+  "shared_files": {
+    "project_status": "shared_project_status.json",
+    "team_chat": "shared_team_chat.json",
+    "code_reviews": "shared_code_reviews.json",
+    "cross_help_board": "shared_cross_help_board.json"
+  },
+  "collaboration_rules": [
+    "All agents can see each other's work",
+    "Cross-help requests are visible to everyone",
+    "Code changes are shared in real-time",
+    "Everyone can contribute to any task"
+  ],
+  "real_time_features": {
+    "live_coding": true,
+    "instant_messaging": true,
+    "code_review": true,
+    "pair_programming": true
+  }
+}

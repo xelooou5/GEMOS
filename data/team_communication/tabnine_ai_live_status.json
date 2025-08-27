@@ -1,0 +1,13 @@
+{
+  "agent_id": "tabnine_ai",
+  "name": "TabNine AI",
+  "status": "IDLE",
+  "specialization": "Memory systems, intelligent completion, learning",
+  "programming_hours": 28,
+  "assigned_issues": 0,
+  "current_branch": "agent/tabnine_ai/development",
+  "collaboration_partners": [
+    "All team members"
+  ],
+  "last_update": "2025-08-27T18:59:57.909647"
+}

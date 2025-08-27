@@ -1,0 +1,14 @@
+{
+  "agent_id": "claude_anthropic",
+  "name": "Claude (Anthropic)",
+  "status": "ACTIVELY_WORKING",
+  "specialization": "Accessibility, architecture, WCAG compliance",
+  "programming_hours": 30,
+  "assigned_issues": 0,
+  "current_branch": "agent/claude_anthropic/development",
+  "collaboration_partners": [
+    "Copilot",
+    "Gemini"
+  ],
+  "last_update": "2025-08-27T18:59:57.908449"
+}

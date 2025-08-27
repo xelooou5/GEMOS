@@ -1,0 +1,14 @@
+{
+  "agent_id": "gemini_google",
+  "name": "Google Gemini",
+  "status": "IDLE",
+  "specialization": "TTS, AWS Polly, speech synthesis, natural language",
+  "programming_hours": 21,
+  "assigned_issues": 0,
+  "current_branch": "agent/gemini_google/development",
+  "collaboration_partners": [
+    "Copilot",
+    "Claude"
+  ],
+  "last_update": "2025-08-27T18:59:57.910144"
+}

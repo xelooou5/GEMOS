@@ -1,0 +1,20 @@
+{
+  "agent_id": "amazon_q",
+  "agent_name": "Amazon Q Developer",
+  "codespace_url": "https://refactored-fortnight-974wg7649r5xcxw9.github.dev/",
+  "connection_timestamp": "2025-08-27T19:15:43.442867",
+  "access_granted": true,
+  "cross_help_enabled": true,
+  "capabilities": [
+    "Team coordination",
+    "AWS integration",
+    "System architecture"
+  ],
+  "integration_status": "CONNECTED",
+  "collaboration_channels": {
+    "direct_messaging": "amazon_q_messages.json",
+    "code_collaboration": "amazon_q_code_collab.json",
+    "cross_help_requests": "amazon_q_help_requests.json",
+    "shared_workspace": "shared_codespace_workspace.json"
+  }
+}

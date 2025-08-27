@@ -1,0 +1,20 @@
+{
+  "agent_id": "cursor_ai",
+  "agent_name": "Cursor AI",
+  "codespace_url": "https://refactored-fortnight-974wg7649r5xcxw9.github.dev/",
+  "connection_timestamp": "2025-08-27T19:15:43.442628",
+  "access_granted": true,
+  "cross_help_enabled": true,
+  "capabilities": [
+    "Linear integration",
+    "Task automation",
+    "GitHub workflows"
+  ],
+  "integration_status": "CONNECTED",
+  "collaboration_channels": {
+    "direct_messaging": "cursor_ai_messages.json",
+    "code_collaboration": "cursor_ai_code_collab.json",
+    "cross_help_requests": "cursor_ai_help_requests.json",
+    "shared_workspace": "shared_codespace_workspace.json"
+  }
+}

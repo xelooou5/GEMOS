@@ -1,0 +1,128 @@
+{
+  "github_copilot": {
+    "can_help_with": [
+      "Code generation",
+      "STT integration",
+      "Real-time coding"
+    ],
+    "can_request_help_from": [
+      "claude_anthropic",
+      "cursor_ai",
+      "tabnine_ai",
+      "gemini_google",
+      "trae_ai",
+      "amazon_q"
+    ],
+    "active_collaborations": [],
+    "help_requests_sent": [],
+    "help_requests_received": []
+  },
+  "claude_anthropic": {
+    "can_help_with": [
+      "Accessibility review",
+      "Architecture guidance",
+      "Code review"
+    ],
+    "can_request_help_from": [
+      "github_copilot",
+      "cursor_ai",
+      "tabnine_ai",
+      "gemini_google",
+      "trae_ai",
+      "amazon_q"
+    ],
+    "active_collaborations": [],
+    "help_requests_sent": [],
+    "help_requests_received": []
+  },
+  "cursor_ai": {
+    "can_help_with": [
+      "Linear integration",
+      "Task automation",
+      "GitHub workflows"
+    ],
+    "can_request_help_from": [
+      "github_copilot",
+      "claude_anthropic",
+      "tabnine_ai",
+      "gemini_google",
+      "trae_ai",
+      "amazon_q"
+    ],
+    "active_collaborations": [],
+    "help_requests_sent": [],
+    "help_requests_received": []
+  },
+  "tabnine_ai": {
+    "can_help_with": [
+      "Intelligent completion",
+      "Memory systems",
+      "Learning assistance"
+    ],
+    "can_request_help_from": [
+      "github_copilot",
+      "claude_anthropic",
+      "cursor_ai",
+      "gemini_google",
+      "trae_ai",
+      "amazon_q"
+    ],
+    "active_collaborations": [],
+    "help_requests_sent": [],
+    "help_requests_received": []
+  },
+  "gemini_google": {
+    "can_help_with": [
+      "TTS integration",
+      "Natural language",
+      "AWS Polly setup"
+    ],
+    "can_request_help_from": [
+      "github_copilot",
+      "claude_anthropic",
+      "cursor_ai",
+      "tabnine_ai",
+      "trae_ai",
+      "amazon_q"
+    ],
+    "active_collaborations": [],
+    "help_requests_sent": [],
+    "help_requests_received": []
+  },
+  "trae_ai": {
+    "can_help_with": [
+      "Advanced coordination",
+      "Multi-AI management",
+      "Student pack utilization"
+    ],
+    "can_request_help_from": [
+      "github_copilot",
+      "claude_anthropic",
+      "cursor_ai",
+      "tabnine_ai",
+      "gemini_google",
+      "amazon_q"
+    ],
+    "active_collaborations": [],
+    "help_requests_sent": [],
+    "help_requests_received": []
+  },
+  "amazon_q": {
+    "can_help_with": [
+      "Team coordination",
+      "AWS integration",
+      "System architecture"
+    ],
+    "can_request_help_from": [
+      "github_copilot",
+      "claude_anthropic",
+      "cursor_ai",
+      "tabnine_ai",
+      "gemini_google",
+      "trae_ai"
+    ],
+    "active_collaborations": [],
+    "help_requests_sent": [],
+    "help_requests_received": []
+  }
+}

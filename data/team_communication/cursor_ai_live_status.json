@@ -1,0 +1,14 @@
+{
+  "agent_id": "cursor_ai",
+  "name": "Cursor AI",
+  "status": "IDLE",
+  "specialization": "Linear integration, task execution, GitHub automation",
+  "programming_hours": 28,
+  "assigned_issues": 2,
+  "current_branch": "agent/cursor_ai/development",
+  "collaboration_partners": [
+    "Amazon Q",
+    "TabNine"
+  ],
+  "last_update": "2025-08-27T18:59:57.909229"
+}

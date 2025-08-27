@@ -1,0 +1,20 @@
+{
+  "agent_id": "claude_anthropic",
+  "agent_name": "Claude (Anthropic)",
+  "codespace_url": "https://refactored-fortnight-974wg7649r5xcxw9.github.dev/",
+  "connection_timestamp": "2025-08-27T19:15:43.442562",
+  "access_granted": true,
+  "cross_help_enabled": true,
+  "capabilities": [
+    "Accessibility review",
+    "Architecture guidance",
+    "Code review"
+  ],
+  "integration_status": "CONNECTED",
+  "collaboration_channels": {
+    "direct_messaging": "claude_anthropic_messages.json",
+    "code_collaboration": "claude_anthropic_code_collab.json",
+    "cross_help_requests": "claude_anthropic_help_requests.json",
+    "shared_workspace": "shared_codespace_workspace.json"
+  }
+}

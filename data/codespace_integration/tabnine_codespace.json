@@ -1,0 +1,20 @@
+{
+  "agent_id": "tabnine_ai",
+  "agent_name": "TabNine AI",
+  "codespace_url": "https://refactored-fortnight-974wg7649r5xcxw9.github.dev/",
+  "connection_timestamp": "2025-08-27T19:15:43.442671",
+  "access_granted": true,
+  "cross_help_enabled": true,
+  "capabilities": [
+    "Intelligent completion",
+    "Memory systems",
+    "Learning assistance"
+  ],
+  "integration_status": "CONNECTED",
+  "collaboration_channels": {
+    "direct_messaging": "tabnine_ai_messages.json",
+    "code_collaboration": "tabnine_ai_code_collab.json",
+    "cross_help_requests": "tabnine_ai_help_requests.json",
+    "shared_workspace": "shared_codespace_workspace.json"
+  }
+}

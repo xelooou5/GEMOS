@@ -1,0 +1,14 @@
+{
+  "agent_id": "github_copilot",
+  "name": "GitHub Copilot",
+  "status": "IDLE",
+  "specialization": "Code generation, STT integration, voice systems",
+  "programming_hours": 20,
+  "assigned_issues": 0,
+  "current_branch": "agent/github_copilot/development",
+  "collaboration_partners": [
+    "Claude",
+    "Gemini"
+  ],
+  "last_update": "2025-08-27T18:59:57.905566"
+}
