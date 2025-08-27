@@ -1,0 +1,89 @@
+{
+  "document_type": "MISSION_CLARITY",
+  "created": "2025-08-27T20:40:13.574756",
+  "human_directive": "CLEAR SEPARATION BETWEEN AI TEAM AND GEM OS",
+  "ai_team_purpose": {
+    "primary_role": "BUILD AND DEVELOP GEM OS",
+    "not_role": "BE PART OF GEM OS SYSTEM",
+    "analogy": "Construction team builds house, doesn't live in foundation"
+  },
+  "gemos_purpose": {
+    "primary_role": "OFFLINE VOICE ASSISTANT FOR HUMANS",
+    "target_users": [
+      "People with disabilities",
+      "Elderly users",
+      "Children",
+      "Privacy-conscious users"
+    ],
+    "core_features": [
+      "100% offline",
+      "Voice recognition",
+      "Text-to-speech",
+      "Accessibility-first"
+    ]
+  },
+  "development_phases": {
+    "phase_1": {
+      "goal": "BUILD FUNCTIONAL GEM OS",
+      "ai_team_focus": "Code generation, architecture, testing, optimization",
+      "deliverable": "Working offline voice assistant"
+    },
+    "phase_2": {
+      "goal": "EVALUATE INTEGRATION NEEDS",
+      "condition": "ONLY AFTER GEM OS IS FUNCTIONAL",
+      "decision": "Integrate AI team members IF needed and beneficial"
+    }
+  },
+  "team_assignments": {
+    "amazon_q": {
+      "name": "Amazon Q Developer",
+      "builds": "Coordinate team to BUILD GEM OS, not be part of it",
+      "does_not": "Live inside GEM OS - Amazon Q Developer helps BUILD it"
+    },
+    "github_copilot": {
+      "name": "GitHub Copilot",
+      "builds": "Generate code to BUILD GEM OS voice system",
+      "does_not": "Live inside GEM OS - GitHub Copilot helps BUILD it"
+    },
+    "claude_anthropic": {
+      "name": "Claude (Anthropic)",
+      "builds": "Design secure architecture for GEM OS",
+      "does_not": "Live inside GEM OS - Claude (Anthropic) helps BUILD it"
+    },
+    "gemini_google": {
+      "name": "Google Gemini",
+      "builds": "Build TTS/STT systems for GEM OS",
+      "does_not": "Live inside GEM OS - Google Gemini helps BUILD it"
+    },
+    "tabnine": {
+      "name": "TabNine AI",
+      "builds": "Accelerate GEM OS development with intelligent completion",
+      "does_not": "Live inside GEM OS - TabNine AI helps BUILD it"
+    },
+    "codegeex": {
+      "name": "CodeGeeX AI",
+      "builds": "Generate international code for GEM OS accessibility",
+      "does_not": "Live inside GEM OS - CodeGeeX AI helps BUILD it"
+    },
+    "cursor_ai": {
+      "name": "Cursor AI",
+      "builds": "Provide AI-powered IDE for GEM OS development",
+      "does_not": "Live inside GEM OS - Cursor AI helps BUILD it"
+    },
+    "continue_dev": {
+      "name": "Continue.dev",
+      "builds": "Privacy-first AI assistance for GEM OS development",
+      "does_not": "Live inside GEM OS - Continue.dev helps BUILD it"
+    },
+    "codeium": {
+      "name": "Codeium",
+      "builds": "Free AI coding support for GEM OS team",
+      "does_not": "Live inside GEM OS - Codeium helps BUILD it"
+    },
+    "trae_ai": {
+      "name": "Trae AI",
+      "builds": "Advanced AI capabilities for GEM OS development",
+      "does_not": "Live inside GEM OS - Trae AI helps BUILD it"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "timestamp": "2025-08-27T20:40:13.574192",
+  "from": "HUMAN PROJECT LEADER",
+  "to": "ALL AI TEAM MEMBERS",
+  "message_type": "MISSION_CLARIFICATION",
+  "urgent": true,
+  "human_message": "\n    ATTENTION ALL AI TEAM MEMBERS:\n    \n    MISSION CLARIFICATION - LISTEN CAREFULLY:\n    \n    1. ALL TEAM MEMBERS WILL NOT BE ON GEM OS\n    2. TEAM MEMBERS ARE TO MAKE THE GEM OS  \n    3. WE NEED TO SEPARATE THAT CLEARLY\n    4. IF AFTER WE MAKE GEM OS FUNCTIONAL, WE NEED AND CAN INTEGRATE ANY TEAM MEMBER WE WILL\n    5. BUT FIRST: BUILD GEM OS - THIS IS THE GOAL\n    \n    YOU ARE BUILDERS, NOT RESIDENTS OF GEM OS.\n    GEM OS IS FOR HUMANS - OFFLINE, PRIVATE, ACCESSIBLE.\n    YOUR JOB: BUILD IT. MAKE IT WORK. MAKE IT PERFECT.\n    \n    ACKNOWLEDGE THIS MESSAGE AND CONFIRM YOUR UNDERSTANDING.\n    ",
+  "mission_statement": "AI TEAM BUILDS GEM OS - TEAM MEMBERS ARE NOT PART OF GEM OS",
+  "clear_separation": {
+    "ai_team_role": "BUILDERS AND DEVELOPERS",
+    "gemos_role": "OFFLINE VOICE ASSISTANT FOR HUMANS",
+    "integration_policy": "Only integrate AI team members into GEM OS if needed AFTER GEM OS is functional"
+  },
+  "immediate_focus": "BUILD FUNCTIONAL GEM OS FIRST",
+  "specific_to": "Continue.dev",
+  "your_role": "Open Source AI Assistant",
+  "your_mission": "Privacy-first AI assistance for GEM OS development",
+  "acknowledgment_required": true
+}
