@@ -1,0 +1,26 @@
+{
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": true,
+    "plaintext": true,
+    "markdown": true,
+    "python": true,
+    "javascript": true,
+    "json": true
+  },
+  "github.copilot.advanced": {
+    "length": 500,
+    "temperature": 0.1,
+    "top_p": 1,
+    "stop": [
+      "\\n\\n"
+    ]
+  },
+  "github.copilot.chat.enabled": true,
+  "github.copilot.chat.welcomeMessage": "always",
+  "editor.inlineSuggest.enabled": true,
+  "editor.suggestOnTriggerCharacters": true,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "workbench.settings.enableNaturalLanguageSearch": true
+}
