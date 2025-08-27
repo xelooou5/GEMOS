@@ -26,6 +26,9 @@ class GemDaemon:
             "TALK_STATUS": "FIXING", 
             "TAKE_ACTION_STATUS": "FIXING",
             "LEARN_MEMORIZE_STATUS": "FIXING",
+            "NEVER_FORGET_SYSTEM": "ACTIVE",
+            "LINEAR_OAUTH": "INTEGRATED",
+            "GITHUB_HUB": "CONNECTED",
             "ai_team": "UNITED_AND_WORKING",
             "voice_system": "ALL_ENGINES_ACTIVE",
             "accessibility": "PRIORITY_ONE",
@@ -238,23 +241,26 @@ class GemDaemon:
                 time.sleep(75)
                 
     def github_gist_manager(self):
-        """💥 HOURLY BACKUP - PC EXPLOSION PROTECTION"""
+        """💥 NEVER FORGET SYSTEM - BACKUP + LINEAR OAUTH"""
         while self.running:
             try:
-                print("💥 RUNNING HOURLY BACKUP - PC EXPLOSION PROTECTION")
+                print("💥 NEVER FORGET SYSTEM ACTIVE")
                 
-                # Hourly GitHub backup
-                subprocess.run(["python3", "hourly_backup.py"], cwd=self.project_root, timeout=300)
-                
-                # Emergency backup of critical files
+                # GitHub backup
                 subprocess.run(["git", "add", "."], cwd=self.project_root, timeout=30)
-                subprocess.run(["git", "commit", "-m", "🔥 EMERGENCY BACKUP - PC PROTECTION"], cwd=self.project_root, timeout=30)
+                subprocess.run(["git", "commit", "-m", "🧠 NEVER FORGET BACKUP"], cwd=self.project_root, timeout=30)
                 subprocess.run(["git", "push", "origin", "main"], cwd=self.project_root, timeout=60)
                 
-                time.sleep(3600)  # Every hour
+                # Linear OAuth integration
+                subprocess.run(["python3", "linear_oauth_daemon.py"], cwd=self.project_root, timeout=60)
+                
+                # GitHub integration hub
+                subprocess.run(["python3", "github_integration_hub.py"], cwd=self.project_root, timeout=60)
+                
+                time.sleep(1800)  # Every 30 minutes
             except Exception as e:
-                print(f"💥 BACKUP ERROR: {e}")
-                time.sleep(300)  # Try again in 5 minutes
+                print(f"🧠 NEVER FORGET ERROR: {e}")
+                time.sleep(300)
                 
     def student_pack_ai_manager(self):
         """Background student pack AI tools management"""
