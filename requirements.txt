@@ -1,6 +1,6 @@
 pyttsx3==2.90
 speechrecognition==3.10.0
-pyaudio==0.2.11
+pyaudio==0.2.14
 faster-whisper==0.10.0
 boto3==1.34.0
 python-dotenv==1.0.0
