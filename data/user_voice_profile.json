@@ -1,0 +1,21 @@
+{
+  "voice_characteristics": {
+    "pitch_range": [
+      100,
+      300
+    ],
+    "speaking_rate": "normal",
+    "accent": "unknown",
+    "age_group": "unknown"
+  },
+  "recognition_preferences": {
+    "confidence_threshold": 0.7,
+    "timeout_duration": 3.0,
+    "retry_attempts": 2
+  },
+  "adaptation_data": {
+    "frequent_commands": {},
+    "correction_patterns": {},
+    "recognition_accuracy": {}
+  }
+}
