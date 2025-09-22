@@ -84,7 +84,7 @@ You are here to make the user's life easier and more productive.
         
     def _init_database(self):
         """Initialize SQLite database for caching and context management."""
-        self.db_path = '/home/oem/PycharmProjects/gem/gemini_enhanced.db'
+        self.db_path = '/home/runner/work/GEMOS/GEMOS/gemini_enhanced.db'
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
         

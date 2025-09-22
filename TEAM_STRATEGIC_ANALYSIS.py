@@ -16,7 +16,7 @@ class TeamStrategicAnalysis:
     """Get real strategic analysis from each AI team member"""
     
     def __init__(self):
-        self.project_root = Path("/home/oem/PycharmProjects/gem")
+        self.project_root = Path("/home/runner/work/GEMOS/GEMOS")
         self.gemos_analysis = self.analyze_gemos_repository()
         
     def analyze_gemos_repository(self):

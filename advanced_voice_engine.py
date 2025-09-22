@@ -82,7 +82,7 @@ class AdvancedVoiceEngine:
     
     def _init_database(self):
         """Initialize SQLite database for learning and optimization."""
-        self.db_path = '/home/oem/PycharmProjects/gem/voice_learning.db'
+        self.db_path = '/home/runner/work/GEMOS/GEMOS/voice_learning.db'
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
         

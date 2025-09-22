@@ -16,7 +16,7 @@ class AllAIAgentsCoordination:
     """Coordinate ALL available AI agents as team members"""
     
     def __init__(self):
-        self.project_root = Path("/home/oem/PycharmProjects/gem")
+        self.project_root = Path("/home/runner/work/GEMOS/GEMOS")
         
         # ALL AI AGENTS AS TEAM MEMBERS (not just tools)
         self.ai_team_members = {

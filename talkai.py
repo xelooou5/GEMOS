@@ -151,7 +151,7 @@ async def main():
         level=logging.INFO,
         format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
         handlers=[
-            logging.FileHandler('/home/oem/PycharmProjects/gem/logs/talkai.log'),
+            logging.FileHandler('/home/runner/work/GEMOS/GEMOS/logs/talkai.log'),
             logging.StreamHandler()
         ]
     )
@@ -252,7 +252,7 @@ async def main():
 
 if __name__ == "__main__":
     # Create log directory if it doesn't exist
-    log_dir = Path('/home/oem/PycharmProjects/gem/logs')
+    log_dir = Path('/home/runner/work/GEMOS/GEMOS/logs')
     log_dir.mkdir(exist_ok=True)
     
     try:
@@ -268,7 +268,7 @@ if __name__ == "__main__":
             'type': 'main_crash'
         }
         
-        crash_file = Path('/home/oem/PycharmProjects/gem/logs/crash_reports.json')
+        crash_file = Path('/home/runner/work/GEMOS/GEMOS/logs/crash_reports.json')
         try:
             if crash_file.exists():
                 with open(crash_file, 'r') as f:

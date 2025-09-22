@@ -12,7 +12,7 @@ from pathlib import Path
 
 class CopilotBackupPlugin:
     def __init__(self):
-        self.project_root = Path("/home/oem/PycharmProjects/gem")
+        self.project_root = Path("/home/runner/work/GEMOS/GEMOS")
         
     def smart_backup(self):
         """GitHub Copilot Pro smart backup"""

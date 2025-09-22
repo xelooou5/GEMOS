@@ -15,7 +15,7 @@ class RealTeamReunion:
     """Assemble all AI team members for mission clarification"""
     
     def __init__(self):
-        self.project_root = Path("/home/oem/PycharmProjects/gem")
+        self.project_root = Path("/home/runner/work/GEMOS/GEMOS")
         self.reunion_dir = self.project_root / "data" / "team_reunion"
         self.reunion_dir.mkdir(parents=True, exist_ok=True)
         

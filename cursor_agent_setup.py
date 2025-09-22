@@ -13,7 +13,7 @@ def setup_cursor_agent():
     print("=" * 50)
     
     # Change to project directory
-    os.chdir("/home/oem/PycharmProjects/gem")
+    os.chdir("/home/runner/work/GEMOS/GEMOS")
     
     print("✅ Cursor Agent installed: 2025.08.27-24c29c1")
     print("✅ PATH configured with ~/.local/bin")
@@ -27,7 +27,7 @@ def setup_cursor_agent():
     
     print("\n💻 CURSOR AGENT COMMANDS:")
     print("cursor-agent --help                    # Show help")
-    print("cursor-agent --project /home/oem/PycharmProjects/gem  # Set project")
+    print("cursor-agent --project /home/runner/work/GEMOS/GEMOS  # Set project")
     print("cursor-agent --task 'Linear integration'  # Run task")
     
     print("\n🔑 CURSOR API KEYS READY:")
@@ -44,7 +44,7 @@ def run_cursor_agent_for_gem():
     try:
         subprocess.run([
             "cursor-agent", 
-            "--project", "/home/oem/PycharmProjects/gem",
+            "--project", "/home/runner/work/GEMOS/GEMOS",
             "--task", "Coordinate GEM OS development with Linear integration"
         ])
     except Exception as e:

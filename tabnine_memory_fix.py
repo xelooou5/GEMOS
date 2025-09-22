@@ -10,7 +10,7 @@ from pathlib import Path
 
 class TabNineMemoryFix:
     def __init__(self):
-        self.project_root = Path("/home/oem/PycharmProjects/gem")
+        self.project_root = Path("/home/runner/work/GEMOS/GEMOS")
         self.db_path = self.project_root / "data" / "memory.db"
         
     def fix_memory_pillar(self):

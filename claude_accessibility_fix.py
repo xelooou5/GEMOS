@@ -8,7 +8,7 @@ from pathlib import Path
 
 class ClaudeAccessibilityFix:
     def __init__(self):
-        self.project_root = Path("/home/oem/PycharmProjects/gem")
+        self.project_root = Path("/home/runner/work/GEMOS/GEMOS")
         
     def fix_accessibility(self):
         """♿ CLAUDE: Implement ACCESSIBILITY features"""

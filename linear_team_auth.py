@@ -85,7 +85,7 @@ LINEAR_WORKSPACE=gemos
 LINEAR_TEAM=GEM
 """
         
-        with open("/home/oem/PycharmProjects/gem/.env.linear", "w") as f:
+        with open("/home/runner/work/GEMOS/GEMOS/.env.linear", "w") as f:
             f.write(env_content)
             
         print("\n📄 Created .env.linear template")

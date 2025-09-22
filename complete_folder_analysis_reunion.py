@@ -13,7 +13,7 @@ class CompleteFolderAnalysisReunion:
     """Complete AI team reunion with full folder analysis"""
     
     def __init__(self):
-        self.gem_folder = Path("/home/oem/PycharmProjects/gem")
+        self.gem_folder = Path("/home/runner/work/GEMOS/GEMOS")
         self.all_files = []
         self.analysis_results = {}
         

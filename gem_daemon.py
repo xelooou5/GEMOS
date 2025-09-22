@@ -20,7 +20,7 @@ class GemDaemon:
     
     def __init__(self):
         self.running = True
-        self.project_root = Path("/home/oem/PycharmProjects/gem")
+        self.project_root = Path("/home/runner/work/GEMOS/GEMOS")
         self.status = {
             "LISTEN_STATUS": "FIXING",
             "TALK_STATUS": "FIXING", 
@@ -536,7 +536,7 @@ def start_daemon():
 
 def check_daemon_status():
     """Check if daemon is running"""
-    status_file = Path("/home/oem/PycharmProjects/gem/data/daemon_status.json")
+    status_file = Path("/home/runner/work/GEMOS/GEMOS/data/daemon_status.json")
     if status_file.exists():
         with open(status_file, 'r') as f:
             status = json.load(f)

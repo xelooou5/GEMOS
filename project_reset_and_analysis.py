@@ -15,7 +15,7 @@ load_dotenv()
 
 class ProjectResetAnalysis:
     def __init__(self):
-        self.project_root = Path("/home/oem/PycharmProjects/gem")
+        self.project_root = Path("/home/runner/work/GEMOS/GEMOS")
         self.linear_token = os.getenv('AMAZON_Q_LINEAR_TOKEN')
         self.team_id = "your_team_id_here"  # Get from Linear
         

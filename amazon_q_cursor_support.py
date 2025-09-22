@@ -11,7 +11,7 @@ class AmazonQCursorSupport:
     """Amazon Q supporting Cursor as Linear coordinator"""
     
     def __init__(self):
-        self.project_root = "/home/oem/PycharmProjects/gem"
+        self.project_root = "/home/runner/work/GEMOS/GEMOS"
         
     def coordinate_with_cursor(self):
         """Amazon Q coordinating with Cursor for Linear tasks"""

@@ -79,7 +79,7 @@ class AIAutomationSystem:
         self._setup_logging()
         
         # Project paths
-        self.project_dir = Path("/home/oem/PycharmProjects/gem")
+        self.project_dir = Path("/home/runner/work/GEMOS/GEMOS")
         self.data_dir = self.project_dir / "data" / "ai_automation"
         self.data_dir.mkdir(parents=True, exist_ok=True)
         

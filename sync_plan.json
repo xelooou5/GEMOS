@@ -1,0 +1,85 @@
+{
+  "timestamp": "2025-09-22T04:19:13.816544",
+  "source_locations": {},
+  "target_structure": {
+    "caretheim": {
+      "path": "/home/runner/work/GEMOS/GEMOS/caretheim",
+      "exists": false,
+      "action": "create"
+    },
+    "gem_core": {
+      "path": "/home/runner/work/GEMOS/GEMOS/gem_core",
+      "exists": false,
+      "action": "create"
+    },
+    "local_gemos": {
+      "path": "/home/runner/work/GEMOS/GEMOS/local_gemos",
+      "exists": false,
+      "action": "create"
+    },
+    "core": {
+      "path": "/home/runner/work/GEMOS/GEMOS/core",
+      "exists": false,
+      "action": "create"
+    },
+    "data": {
+      "path": "/home/runner/work/GEMOS/GEMOS/data",
+      "exists": true,
+      "action": "exists"
+    },
+    "resources": {
+      "path": "/home/runner/work/GEMOS/GEMOS/resources",
+      "exists": true,
+      "action": "exists"
+    },
+    "configs": {
+      "path": "/home/runner/work/GEMOS/GEMOS/configs",
+      "exists": false,
+      "action": "create"
+    },
+    "scripts": {
+      "path": "/home/runner/work/GEMOS/GEMOS/scripts",
+      "exists": false,
+      "action": "create"
+    },
+    "backup": {
+      "path": "/home/runner/work/GEMOS/GEMOS/backup",
+      "exists": false,
+      "action": "create"
+    }
+  },
+  "sync_actions": [
+    {
+      "action": "remove_broken_symlinks",
+      "description": "Remove broken symbolic links",
+      "files": [
+        "AUTONOMOUS_CONFIG.json",
+        "README.md",
+        "autonomous_aiteam.py",
+        "autonomous_aiteam.sh",
+        "core",
+        "autonomous_ai_team.py"
+      ]
+    },
+    {
+      "action": "create_placeholder_files",
+      "description": "Create placeholder files for missing content",
+      "priority": "high"
+    },
+    {
+      "action": "sync_from_backup",
+      "description": "Sync files from backup locations if available",
+      "priority": "medium"
+    },
+    {
+      "action": "create_directory_structure",
+      "description": "Create comprehensive directory structure",
+      "priority": "high"
+    },
+    {
+      "action": "update_path_references",
+      "description": "Update all file path references to use repository structure",
+      "priority": "high"
+    }
+  ]
+}
