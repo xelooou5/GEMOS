@@ -9,7 +9,7 @@ import json
 from pathlib import Path
 
 # Load environment variables
-env_file = Path("/home/oem/PycharmProjects/gem/.env")
+env_file = Path("/home/runner/work/GEMOS/GEMOS/.env")
 if env_file.exists():
     with open(env_file, 'r') as f:
         for line in f:

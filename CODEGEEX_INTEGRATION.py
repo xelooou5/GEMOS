@@ -19,7 +19,7 @@ class CodeGeeXIntegration:
         
     def setup_codegeex_api_key(self):
         """Setup CodeGeeX API key in .env"""
-        env_file = Path("/home/oem/PycharmProjects/gem/.env")
+        env_file = Path("/home/runner/work/GEMOS/GEMOS/.env")
         
         # Read current .env
         with open(env_file, 'r') as f:
@@ -161,7 +161,7 @@ class CodeGeeXIntegration:
         }
         
         # Save message
-        comm_dir = Path("/home/oem/PycharmProjects/gem/data/team_communication")
+        comm_dir = Path("/home/runner/work/GEMOS/GEMOS/data/team_communication")
         comm_dir.mkdir(parents=True, exist_ok=True)
         
         with open(comm_dir / "codegeex_integration_message.json", 'w') as f:

@@ -13,7 +13,7 @@ class GitHubCleanupAutomation:
     """Automated GitHub cleanup and updates"""
     
     def __init__(self):
-        self.project_root = Path("/home/oem/PycharmProjects/gem")
+        self.project_root = Path("/home/runner/work/GEMOS/GEMOS")
         self.garbage_patterns = [
             "backup_*",
             "*.log",

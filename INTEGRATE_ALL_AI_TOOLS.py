@@ -14,7 +14,7 @@ class RealAIToolsIntegration:
     """Actually integrate all available AI tools"""
     
     def __init__(self):
-        self.project_root = Path("/home/oem/PycharmProjects/gem")
+        self.project_root = Path("/home/runner/work/GEMOS/GEMOS")
         self.env_file = self.project_root / ".env"
         self.load_env_keys()
     

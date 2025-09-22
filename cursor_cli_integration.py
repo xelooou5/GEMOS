@@ -12,7 +12,7 @@ class CursorCLIIntegration:
     """Cursor CLI integration for Linear automation"""
     
     def __init__(self):
-        self.project_root = "/home/oem/PycharmProjects/gem"
+        self.project_root = "/home/runner/work/GEMOS/GEMOS"
         
     def check_cursor_cli(self):
         """Check if Cursor CLI is available"""

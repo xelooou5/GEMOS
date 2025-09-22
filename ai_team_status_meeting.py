@@ -11,7 +11,7 @@ from pathlib import Path
 
 class AITeamStatusMeeting:
     def __init__(self):
-        self.project_root = Path("/home/oem/PycharmProjects/gem")
+        self.project_root = Path("/home/runner/work/GEMOS/GEMOS")
         self.meeting_time = datetime.now()
         
     async def call_team_meeting(self):

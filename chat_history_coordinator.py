@@ -17,7 +17,7 @@ class ChatHistoryCoordinator:
             Path.home() / ".continue/sessions",
             Path.home() / ".cursor/chat",
             Path.home() / ".amazonq/chat",
-            Path("/home/oem/PycharmProjects/gem")
+            Path("/home/runner/work/GEMOS/GEMOS")
         ]
         self.work_counter = 0
         

@@ -10,7 +10,7 @@ from pathlib import Path
 
 class AITeamDelegation:
     def __init__(self):
-        self.project_root = Path("/home/oem/PycharmProjects/gem")
+        self.project_root = Path("/home/runner/work/GEMOS/GEMOS")
         
     def delegate_all_pillars(self):
         """🧠 AMAZON Q: Delegate work to ALL AI agents"""

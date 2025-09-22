@@ -21,7 +21,7 @@ def run_cursor_commands():
     """Run Cursor CLI commands for Linear integration"""
     commands = [
         "cursor --help",
-        f"cursor /home/oem/PycharmProjects/gem"
+        f"cursor /home/runner/work/GEMOS/GEMOS"
     ]
     
     for cmd in commands:

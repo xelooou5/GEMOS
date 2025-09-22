@@ -38,7 +38,7 @@ class TalkAIAdvanced:
             level=logging.INFO,
             format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
             handlers=[
-                logging.FileHandler('/home/oem/PycharmProjects/gem/talkai.log'),
+                logging.FileHandler('/home/runner/work/GEMOS/GEMOS/talkai.log'),
                 logging.StreamHandler()
             ]
         )
@@ -276,7 +276,7 @@ class TalkAIAdvanced:
         }
         
         try:
-            with open('/home/oem/PycharmProjects/gem/session_data.json', 'w') as f:
+            with open('/home/runner/work/GEMOS/GEMOS/session_data.json', 'w') as f:
                 json.dump(session_data, f, indent=2, default=str)
             print("💾 Dados da sessão salvos")
         except Exception as e:

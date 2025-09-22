@@ -19,9 +19,9 @@ class CommitAIIntegration:
         while True:
             # Auto-commit changes
             try:
-                subprocess.run(["git", "add", "."], cwd="/home/oem/PycharmProjects/gem")
+                subprocess.run(["git", "add", "."], cwd="/home/runner/work/GEMOS/GEMOS")
                 subprocess.run(["git", "commit", "-m", f"💻 COMMIT AI - Auto commit {datetime.now().strftime('%H:%M')}"], 
-                             cwd="/home/oem/PycharmProjects/gem")
+                             cwd="/home/runner/work/GEMOS/GEMOS")
                 print("💻 COMMIT AI: Auto-committed changes")
             except:
                 pass

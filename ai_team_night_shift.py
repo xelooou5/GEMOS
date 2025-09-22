@@ -15,7 +15,7 @@ class AITeamNightShift:
     
     def __init__(self):
         self.start_time = datetime.now()
-        self.gem_folder = "/home/oem/PycharmProjects/gem"
+        self.gem_folder = "/home/runner/work/GEMOS/GEMOS"
         self.home_folder = "/home/oem"
         
     async def run_night_shift(self):

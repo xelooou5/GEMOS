@@ -12,7 +12,7 @@ class PyCharmCursorIntegration:
     """PyCharm + Cursor CLI integration"""
     
     def __init__(self):
-        self.project_path = "/home/oem/PycharmProjects/gem"
+        self.project_path = "/home/runner/work/GEMOS/GEMOS"
         
     def setup_cursor_in_pycharm(self):
         """Setup Cursor CLI integration in PyCharm"""

@@ -86,7 +86,7 @@ def main():
     
     print("\n🔥 STARTING GEM DAEMON WITH ALL AI AGENTS...")
     import subprocess
-    subprocess.run(["python3", "gem_daemon.py"], cwd="/home/oem/PycharmProjects/gem")
+    subprocess.run(["python3", "gem_daemon.py"], cwd="/home/runner/work/GEMOS/GEMOS")
     
     print("\n✅ ALL AI AGENTS ACTIVATED AND WORKING!")
     print("✅ MISSION IN PROGRESS - FIXING ALL 4 PILLARS!")

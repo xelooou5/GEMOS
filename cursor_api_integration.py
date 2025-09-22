@@ -92,10 +92,10 @@ LINEAR_TEAM={self.linear_team}
 
 # PROJECT INFO
 PROJECT_NAME=GEM OS
-PROJECT_PATH=/home/oem/PycharmProjects/gem
+PROJECT_PATH=/home/runner/work/GEMOS/GEMOS
 """
         
-        with open("/home/oem/PycharmProjects/gem/.env.cursor", "w") as f:
+        with open("/home/runner/work/GEMOS/GEMOS/.env.cursor", "w") as f:
             f.write(env_content)
             
         print("\n📄 Created .env.cursor with all API keys")
